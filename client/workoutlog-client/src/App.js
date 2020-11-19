@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Sitebar from "./home/Navbar";
+import Auth from "./Auth/Auth";
 
 function App() {
   const [sessionToken, setSessionToken] = useState("");
@@ -19,6 +20,7 @@ function App() {
   return (
     <div>
       <Sitebar />
+      <Auth updateToken={updateToken}/>
     </div>
   );
 }
