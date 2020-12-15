@@ -43,7 +43,7 @@ const WorkoutTable = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {workoutMapper()}
+                    {/* {workoutMapper()} */}
                 </tbody>
             </Table>
         </>
