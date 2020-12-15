@@ -26,4 +26,17 @@ router.post('/create', async (req, res) => {
     }
 })
 
+router.delete('/delete/:id', (req,res) => {
+    const query = {where: {id: req.params.id, userId: req.user.id}}
+    UserInfo.destroy(query)
+    .then(info => res.status(200).json({
+        info: info,
+        message: 'User Info Deleted'
+    }))
+    .catch(err => res.json({
+        error: err,
+        message: 'oops'
+    }))
+})
+
 module.exports = router
